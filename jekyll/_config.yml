@@ -1,5 +1,5 @@
 name: Nitish's Blog
 pygments: true
 destination: ../blog
-baseurl: /nitishsp.github.io/blog
+baseurl: /blog
 exclude: [.gitignore, .ruby-version, .ruby-gemset]
