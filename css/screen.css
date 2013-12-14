@@ -1,7 +1,100 @@
-a {
-  text-decoration: none;
+h1 {
+  font-family: 'Ubuntu';
+  font-weight: 500;
 }
 
-a:hover {
-  text-decoration: underline;
+p {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+}
+
+a i {
+  color: #7b7b7b;
+}
+
+a:hover i {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover i.icon-github {
+  color: #171515;
+}
+
+a:hover i.icon-googleplus-rect {
+  color: #dd1812;
+}
+
+a:hover i.icon-blogger-rect {
+  color: #fc4f08;
+}
+a:hover i.icon-facebook-rect {
+  color: #3b5998;
+}
+
+a:hover i.icon-linkedin-rect {
+  color: #0e76a8;
+}
+a:hover i.icon-twitter-bird {
+  color: #00acee;
+}
+
+@font-face {
+  font-family: 'brandico';
+  src: url('brandico.eot?49362932');
+  src: url('brandico.eot?49362932#iefix') format('embedded-opentype'),
+       url('brandico.woff?49362932') format('woff'),
+       url('brandico.ttf?49362932') format('truetype'),
+       url('brandico.svg?49362932#brandico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "brandico";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  margin-right: .2em;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  font-size: 880%;
+}
+
+.icon-facebook-rect:before { content: '\f301'; }
+.icon-twitter-bird:before { content: '\f303'; }
+.icon-googleplus-rect:before { content: '\f309'; }
+.icon-github:before { content: '\f308'; }
+.icon-blogger-rect:before { content: '\f315'; }
+.icon-linkedin-rect:before { content: '\f31b'; }
+
+
+/* Sticky footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -30px;
+}
+
+#push,
+#footer {
+  height: 30px;
 }
