@@ -25,9 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+strong, b {
+  color: #424242;
+}
 
 table {
   font-size: inherit;
@@ -55,9 +55,17 @@ ul.posts li {
 
 ul.posts li a {
   text-decoration: none;
-  color: #307EA9;
+  color: #0067C0;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
+  -webkit-transition: color 500ms ease;
+  -moz-transition: color 500ms ease;
+  -o-transition: color 500ms ease;
+  transition: color 500ms ease;
+}
+
+ul.posts li a:hover {
+  color: #FF4136;
 }
 
 ul.posts li span {
@@ -89,13 +97,10 @@ ul.posts li span {
 }
 
 .site .header h1.title a {
-  color: #808080;
+  color: #636363;
   text-decoration: none;
 }
 
-.site .header h1.title a:hover {
-  color: #000;
-}
 
 /*****************************************************************************/
 /*
@@ -142,7 +147,7 @@ ul.posts li span {
 
 .post a {
   text-decoration: none;
-  color: #52dae7;
+  color: #39CCCC;
 }
 
 .post a:hover {
@@ -181,4 +186,8 @@ ul.posts li span {
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+#comments-seperator {
+  margin: 40px 0 20px 0;
 }

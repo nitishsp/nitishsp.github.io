@@ -13,11 +13,11 @@ a i {
 }
 
 a:hover i {
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 a:hover i.icon-github {
@@ -28,7 +28,7 @@ a:hover i.icon-googleplus-rect {
   color: #dd1812;
 }
 
-a:hover i.icon-blogger-rect {
+a:hover i.icon-blog {
   color: #fc4f08;
 }
 a:hover i.icon-facebook-rect {
@@ -81,7 +81,7 @@ a:hover i.icon-twitter-bird {
 .icon-twitter-bird:before { content: '\f303'; }
 .icon-googleplus-rect:before { content: '\f309'; }
 .icon-github:before { content: '\f308'; }
-.icon-blogger-rect:before { content: '\f315'; }
+.icon-blog:before { content: '\f30a'; }
 .icon-linkedin-rect:before { content: '\f31b'; }
 
 
