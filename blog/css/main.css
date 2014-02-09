@@ -13,8 +13,7 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  background-color: #FBFBFB;
   font-size: small;
   text-align: center;
 }
@@ -123,21 +122,23 @@ ul.posts li span {
 }
 
 .post-header .meta {
-  font-size: 12px;
+  font-size: 13px;
   color: #aaa;
   margin-top: 0.5em;
 }
 
-.post p {
+.post {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   color: #424242;
+}
+
+.post p {
   margin: 1em 0em;
   text-align: justify;
 }
 
 .post h2 {
-  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 400;
