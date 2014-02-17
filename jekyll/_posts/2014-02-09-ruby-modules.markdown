@@ -52,7 +52,7 @@ In method 1
 {% endhighlight %}
 
 From the example above, you can see that a method need not be defined in the class of the object on which it is called. It could be defined in any of the ancestor classes or in modules included by those classes. When you call a method on an object, it looks for that method at the following places:
-1. It's class
+1. Its class
 2. Included modules
 3. Parent class
 4. Modules included by parent class

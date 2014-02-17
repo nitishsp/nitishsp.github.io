@@ -24,7 +24,7 @@ Some objects in Ruby (symbols, fixnums, false, true and nil) are stored directly
 
 If you want to protect an object from being manipulated, invoke `freeze()` method on that object. Any attempts to modify a frozen object will result in runtime error. There is no way to unfreeze an object. If you wish to modify frozen object, you will have to create a copy of the object using `dup()` method and then manipulate it.
 
-A method in Ruby may accept variables when called. Variables specified in method definition are called as formal parameters of the method and the values you supply while calling the method are called it's arguments. When a method is called, the arguments passed to it are assigned to local variables which are visible inside method definition.
+A method in Ruby may accept variables when called. Variables specified in method definition are called as formal parameters of the method and the values you supply while calling the method are called its arguments. When a method is called, the arguments passed to it are assigned to local variables which are visible inside method definition.
 
 Methods in Ruby can take variable number of arguments using splat `(*)` operator and/or default values. When a method is called, Ruby tries to assign values to required parameters first and then to default valued parameters. If any arguments are left, they are packed into an array and assigned to the splat parameter otherwise the splat parameter is assigned an empty array `[]`. If number of arguments supplied is less than the number of required parameters, ArgumentError is raised. Splat operator can also be used while calling a method to unpack array.
 
