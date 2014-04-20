@@ -27,12 +27,12 @@
 </div>
 
 <div class="post">
-  <p>Modules are great for code organization. They are typically used for organizing related code together and mixing them in other classes and modules when required. All modules are instances of <strong>Module</strong> class. Modules are similar to classes. In fact, class <code>Module</code> is superclass of class <code>Class</code>. Unlike classes, modules cannot be instantiated. They don&#8217;t support inheritance either. A module is defined using <strong>module</strong> keyword.</p>
+  <p>Modules are great for code organization. They are typically used for organizing related code together and mixing them in other classes and modules when required. All modules are instances of <strong>Module</strong> class. Modules are similar to classes. In fact, class <code>Module</code> is superclass of class <code>Class</code>. Unlike classes, modules cannot be instantiated. They don’t support inheritance either. A module is defined using <strong>module</strong> keyword.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>module</span> <span class='nn'>A</span>
   <span class='c1'># module body</span>
 <span class='k'>end</span>
 </code></pre></div>
-<p>Modules consist of methods, constants, classes and other modules. Methods in a module can be of two types: <strong>module methods</strong> or <strong>instance methods</strong>. Module methods are defined by using self keyword. They are basically singleton methods on module object and can be accessed directly using module name. Module&#8217;s instance methods can be used by other modules and classes by including or extending module. The <strong>include</strong> method makes all instance methods of the included module available as instance methods whereas the <strong>extend</strong> method makes all instance methods available as singleton methods of the class or module from which it is called.</p>
+<p>Modules consist of methods, constants, classes and other modules. Methods in a module can be of two types: <strong>module methods</strong> or <strong>instance methods</strong>. Module methods are defined by using self keyword. They are basically singleton methods on module object and can be accessed directly using module name. Module’s instance methods can be used by other modules and classes by including or extending module. The <strong>include</strong> method makes all instance methods of the included module available as instance methods whereas the <strong>extend</strong> method makes all instance methods available as singleton methods of the class or module from which it is called.</p>
 <div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='k'>module</span> <span class='nn'>A</span>
 <span class='o'>&gt;&gt;</span>   <span class='c1'># instance method</span>
 <span class='o'>&gt;&gt;</span>   <span class='k'>def</span> <span class='nf'>method1</span>
@@ -81,15 +81,15 @@
 <li>Modules included by parent class</li>
 </ol>
 
-<p>and so on&#8230; all the way to the <code>BasicObject</code> class.</p>
+<p>and so on… all the way to the <code>BasicObject</code> class.</p>
 
 <p>When two or more methods have the same name, the one defined later gets called. If the same method is defined in two or more included modules, the one in the most recently included module gets called. Including a module more than once has no effect.</p>
 
 <p>If method is not found, the interpreter sends a special message <strong>method_missing</strong> to the receiver along with the symbol of non-existent method and array of parameters passed to the method.</p>
 
-<p>It is possible to call an overridden method using <strong>super</strong>. You can use super keyword inside the body of a method definition to pass the method call up the lookup chain. When called without arguments e.g. <code>super</code>, it passes all the parameter received by the method from which it&#8217;s called. You can also explicitly pass 0 or more parameters e.g. <code>super()</code> or <code>super(a, b)</code>.</p>
+<p>It is possible to call an overridden method using <strong>super</strong>. You can use super keyword inside the body of a method definition to pass the method call up the lookup chain. When called without arguments e.g. <code>super</code>, it passes all the parameter received by the method from which it’s called. You can also explicitly pass 0 or more parameters e.g. <code>super()</code> or <code>super(a, b)</code>.</p>
 
-<p>Ruby allows you to nest classes inside modules or modules inside classes. Further, you can encapsulate code in both modules and classes in a similar way. There is no particular rule to consider while picking classes or modules for your program&#8217;s architecture. You have to consider the limits of both the constructs and use them in a sensible way.</p>
+<p>Ruby allows you to nest classes inside modules or modules inside classes. Further, you can encapsulate code in both modules and classes in a similar way. There is no particular rule to consider while picking classes or modules for your program’s architecture. You have to consider the limits of both the constructs and use them in a sensible way.</p>
 </div>
 
 <hr id="comments-seperator">

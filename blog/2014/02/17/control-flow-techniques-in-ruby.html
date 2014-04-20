@@ -72,7 +72,7 @@
 </code></pre></div>
 <p>In the above example, variable <code>t1</code> does not throw <code>NameError</code>. This is because when Ruby parses the code, it sees <code>t1 = 2</code> and allocates memory for <code>t1</code>. So t1 exists as result of parsing process but it is not assigned any value.</p>
 
-<p><code>case..when</code> is similar to C or Java&#8217;s switch case which one caveat. <code>when</code> does not use <code>==</code> to test equality, rather it uses <code>===</code> operator, which is syntactic sugar for method call <code>.===</code>. For most of the common Ruby classes such as <code>String</code>, <code>===</code> is same as <code>==</code>.</p>
+<p><code>case..when</code> is similar to C or Java’s switch case which one caveat. <code>when</code> does not use <code>==</code> to test equality, rather it uses <code>===</code> operator, which is syntactic sugar for method call <code>.===</code>. For most of the common Ruby classes such as <code>String</code>, <code>===</code> is same as <code>==</code>.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>case</span> <span class='n'>test_var</span>
 <span class='k'>when</span> <span class='mi'>1</span>
   <span class='nb'>puts</span> <span class='s2'>&quot;test_var is 1&quot;</span>
@@ -117,7 +117,7 @@
   <span class='nb'>puts</span> <span class='n'>a</span>
 <span class='k'>end</span>
 </code></pre></div>
-<p>An <strong>exception</strong> in Ruby is a special kind of object of class <strong>Exception</strong> or its descendants. Ruby provides <strong>rescue</strong> clause to handle exceptions and <strong>ensure</strong> clause to make sure that certain code gets executed whether an exception is thrown or not. Ruby&#8217;s <code>begin..rescue..ensure</code> is similar to Java&#8217;s <code>try..catch..finally</code> block. You can raise exception programatically using <strong>raise</strong> keyword. While rescuing from an exception, you can catch the thrown exception object using special operator <code>=&gt;</code>. Here is a contrived example that tries to explain the constructs.</p>
+<p>An <strong>exception</strong> in Ruby is a special kind of object of class <strong>Exception</strong> or its descendants. Ruby provides <strong>rescue</strong> clause to handle exceptions and <strong>ensure</strong> clause to make sure that certain code gets executed whether an exception is thrown or not. Ruby’s <code>begin..rescue..ensure</code> is similar to Java’s <code>try..catch..finally</code> block. You can raise exception programatically using <strong>raise</strong> keyword. While rescuing from an exception, you can catch the thrown exception object using special operator <code>=&gt;</code>. Here is a contrived example that tries to explain the constructs.</p>
 <div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='k'>begin</span>
 <span class='sc'>?&gt;</span>   <span class='k'>raise</span> <span class='no'>RuntimeError</span><span class='p'>,</span> <span class='s2'>&quot;Problem occurred!&quot;</span>
 <span class='o'>&gt;&gt;</span> <span class='k'>rescue</span> <span class='no'>RuntimeError</span> <span class='o'>=&gt;</span> <span class='n'>e</span>
@@ -139,9 +139,9 @@
 </code></pre></div>
 <p>In the above example, <code>raise RuntimeError</code> is syntactic sugar for <code>raise RuntimeError.new</code>. You raise exception object, not class.</p>
 
-<p>If Ruby&#8217;s built-in exceptions do not suit your needs, you can define you own exception class by subclassing <code>Exception</code> or one of its descendants.</p>
+<p>If Ruby’s built-in exceptions do not suit your needs, you can define you own exception class by subclassing <code>Exception</code> or one of its descendants.</p>
 
-<p>That&#8217;s it for now. In the next article we will take a look at more powerful control flow constructs, code block.</p>
+<p>That’s it for now. In the next article we will take a look at more powerful control flow constructs, code block.</p>
 </div>
 
 <hr id="comments-seperator">

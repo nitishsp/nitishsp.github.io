@@ -176,6 +176,7 @@ ul.posts li span {
 
 .post pre code {
   border: none;
+  word-wrap: break-word;
 }
 
 /* terminal */

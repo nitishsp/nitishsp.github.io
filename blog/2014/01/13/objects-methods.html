@@ -29,9 +29,9 @@
 <div class="post">
   <p>This week I learnt about some basics of objects and methods in Ruby, Here is the summary.</p>
 
-<p>Depending on your Ruby version, the root of Ruby class hierarchy is <strong>Object</strong> or <strong>BasicObject</strong>. BasicObject was introduced in Ruby 1.9 and is parent of Object class. BasicObject is stripped down version of Object and contains very few methods. You can inherit from BasicObject to create class hierarchies independent of Ruby&#8217;s built in hierarchy. For the rest of this blog post I will focus on Object and its descendants.</p>
+<p>Depending on your Ruby version, the root of Ruby class hierarchy is <strong>Object</strong> or <strong>BasicObject</strong>. BasicObject was introduced in Ruby 1.9 and is parent of Object class. BasicObject is stripped down version of Object and contains very few methods. You can inherit from BasicObject to create class hierarchies independent of Ruby’s built in hierarchy. For the rest of this blog post I will focus on Object and its descendants.</p>
 
-<p>Each object has an unique object id. You can get an object&#8217;s id using <code>object_id</code> or <code>__id__</code> methods. In standard Ruby (MRI), object id is same as VALUE which represents objects at C level. You may notice that object ids of true, false, nil and fixnums are constant across multiple runs. This is because of some clever performance optimization in MRI. You can read more about them <a href='http://stackoverflow.com/questions/3430280/ruby-how-does-object-id-assignment-work'>here</a>, <a href='http://www.oreillynet.com/ruby/blog/2006/01/the_ruby_value_1.html'>here</a> and <a href='http://www.oreillynet.com/ruby/blog/2006/02/ruby_values_and_object_ids.html'>here</a></p>
+<p>Each object has an unique object id. You can get an object’s id using <code>object_id</code> or <code>__id__</code> methods. In standard Ruby (MRI), object id is same as VALUE which represents objects at C level. You may notice that object ids of true, false, nil and fixnums are constant across multiple runs. This is because of some clever performance optimization in MRI. You can read more about them <a href="http://stackoverflow.com/questions/3430280/ruby-how-does-object-id-assignment-work">here</a>, <a href="http://www.oreillynet.com/ruby/blog/2006/01/the_ruby_value_1.html">here</a> and <a href="http://www.oreillynet.com/ruby/blog/2006/02/ruby_values_and_object_ids.html">here</a></p>
 
 <p>Variables act as containers for object. Usually they store references to objects, so you have to be careful while manipulating objects. Consider the following example:</p>
 <div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='n'>a</span> <span class='o'>=</span> <span class='s2'>&quot;one&quot;</span>
@@ -78,7 +78,7 @@
 <span class='o'>[</span><span class='mi'>3</span><span class='p'>,</span> <span class='mi'>4</span><span class='o'>]</span>
 <span class='mi'>5</span>
 </code></pre></div>
-<p>The optional parameters have to occur in the middle only. You can have required parameters on either side or both sides only. Also, you can have only one parameter with splat operator and you can&#8217;t put it to the left of any default valued parameter.</p>
+<p>The optional parameters have to occur in the middle only. You can have required parameters on either side or both sides only. Also, you can have only one parameter with splat operator and you can’t put it to the left of any default valued parameter.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>example</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='o'>=</span><span class='mi'>1</span><span class='p'>,</span> <span class='n'>c</span> <span class='p'>,</span> <span class='o'>*</span><span class='n'>d</span><span class='p'>,</span> <span class='n'>e</span><span class='p'>)</span> <span class='c1'># invalid, required parameter in the middle</span>
 <span class='k'>def</span> <span class='nf'>example</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>c</span> <span class='p'>,</span> <span class='o'>*</span><span class='n'>d</span><span class='p'>,</span> <span class='n'>e</span><span class='p'>)</span> <span class='c1'># invalid, more than one splat parameter</span>
 <span class='k'>def</span> <span class='nf'>example</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span><span class='o'>*</span><span class='n'>b</span><span class='p'>,</span><span class='n'>c</span><span class='o'>=</span><span class='mi'>1</span><span class='p'>)</span> <span class='c1'># invalid, splat parameter to the left of default valued</span>
@@ -98,7 +98,7 @@
 <span class='mi'>42</span>
 <span class='p'>{</span><span class='ss'>check</span><span class='p'>:</span> <span class='kp'>true</span><span class='p'>}</span>
 </code></pre></div>
-<p>That&#8217;s it for this week.</p>
+<p>That’s it for this week.</p>
 </div>
 
 <hr id="comments-seperator">
