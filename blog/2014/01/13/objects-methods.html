@@ -34,15 +34,17 @@
 <p>Each object has an unique object id. You can get an object’s id using <code>object_id</code> or <code>__id__</code> methods. In standard Ruby (MRI), object id is same as VALUE which represents objects at C level. You may notice that object ids of true, false, nil and fixnums are constant across multiple runs. This is because of some clever performance optimization in MRI. You can read more about them <a href="http://stackoverflow.com/questions/3430280/ruby-how-does-object-id-assignment-work">here</a>, <a href="http://www.oreillynet.com/ruby/blog/2006/01/the_ruby_value_1.html">here</a> and <a href="http://www.oreillynet.com/ruby/blog/2006/02/ruby_values_and_object_ids.html">here</a></p>
 
 <p>Variables act as containers for object. Usually they store references to objects, so you have to be careful while manipulating objects. Consider the following example:</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='n'>a</span> <span class='o'>=</span> <span class='s2'>&quot;one&quot;</span>
-<span class='o'>&gt;&gt;</span> <span class='n'>b</span> <span class='o'>=</span> <span class='n'>a</span> <span class='c1'># copies content of variable, i.e. reference, not the actual object</span>
-<span class='o'>&gt;&gt;</span> <span class='nb'>puts</span> <span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span>
-<span class='n'>one</span>
-<span class='n'>one</span>
-<span class='o'>&gt;&gt;</span> <span class='n'>a</span><span class='o'>.</span><span class='n'>replace</span><span class='p'>(</span><span class='s2'>&quot;two&quot;</span><span class='p'>)</span> <span class='c1'># method is called on the actual object</span>
-<span class='o'>&gt;&gt;</span> <span class='nb'>puts</span> <span class='n'>b</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;two&quot;</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;one&quot;</span>
+<span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># copies content of variable, i.e. reference, not the actual object</span>
+<span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+<span class="n">one</span>
+<span class="n">one</span>
+<span class="o">&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;two&quot;</span><span class="p">)</span> <span class="c1"># method is called on the actual object</span>
+<span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="n">b</span>
+<span class="o">=&gt;</span> <span class="s2">&quot;two&quot;</span>
 </code></pre></div>
+
 <p>Some objects in Ruby (symbols, fixnums, false, true and nil) are stored directly in variables. When you assign one of these objects to a variable, variable stores the value itself rather than a reference. Regardless of this distinction, assignment statement always overwrites variables with whatever is there to the right of the <code>=</code> sign.</p>
 
 <p>If you want to protect an object from being manipulated, invoke <code>freeze()</code> method on that object. Any attempts to modify a frozen object will result in runtime error. There is no way to unfreeze an object. If you wish to modify frozen object, you will have to create a copy of the object using <code>dup()</code> method and then manipulate it.</p>
@@ -50,55 +52,62 @@
 <p>A method in Ruby may accept variables when called. Variables specified in method definition are called as formal parameters of the method and the values you supply while calling the method are called its arguments. When a method is called, the arguments passed to it are assigned to local variables which are visible inside method definition.</p>
 
 <p>Methods in Ruby can take variable number of arguments using splat <code>(*)</code> operator and/or default values. When a method is called, Ruby tries to assign values to required parameters first and then to default valued parameters. If any arguments are left, they are packed into an array and assigned to the splat parameter otherwise the splat parameter is assigned an empty array <code>[]</code>. If number of arguments supplied is less than the number of required parameters, ArgumentError is raised. Splat operator can also be used while calling a method to unpack array.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='k'>def</span> <span class='nf'>mix_and_match</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='o'>=</span><span class='mi'>1</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>c</span><span class='p'>,</span> <span class='n'>d</span><span class='p'>)</span>
-<span class='o'>&gt;&gt;</span>   <span class='nb'>p</span> <span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='p'>,</span> <span class='n'>c</span><span class='p'>,</span> <span class='n'>d</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>end</span>
 
-<span class='o'>&gt;&gt;</span> <span class='n'>mix_and_match</span><span class='p'>(</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>)</span>
-<span class='mi'>1</span>
-<span class='mi'>1</span>
-<span class='o'>[]</span>
-<span class='mi'>2</span>
+<div class="highlight"><pre><code class="ruby"><span class="o">&gt;&gt;</span> <span class="k">def</span> <span class="nf">mix_and_match</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span>   <span class="nb">p</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span>
+<span class="o">&gt;&gt;</span> <span class="k">end</span>
 
-<span class='o'>&gt;&gt;</span> <span class='n'>mix_and_match</span><span class='p'>(</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>)</span>
-<span class='mi'>1</span>
-<span class='mi'>2</span>
-<span class='o'>[]</span>
-<span class='mi'>3</span>
+<span class="o">&gt;&gt;</span> <span class="n">mix_and_match</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="mi">1</span>
+<span class="o">[]</span>
+<span class="mi">2</span>
 
-<span class='o'>&gt;&gt;</span> <span class='n'>mix_and_match</span><span class='p'>(</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>,</span> <span class='mi'>5</span><span class='p'>)</span>
-<span class='mi'>1</span>
-<span class='mi'>2</span>
-<span class='o'>[</span><span class='mi'>3</span><span class='p'>,</span> <span class='mi'>4</span><span class='o'>]</span>
-<span class='mi'>5</span>
+<span class="o">&gt;&gt;</span> <span class="n">mix_and_match</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="o">[]</span>
+<span class="mi">3</span>
 
-<span class='o'>&gt;&gt;</span> <span class='n'>mix_and_match</span><span class='p'>(</span><span class='mi'>1</span><span class='p'>,</span> <span class='o'>*[</span><span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='o'>]</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>,</span> <span class='mi'>5</span><span class='p'>)</span>
-<span class='mi'>1</span>
-<span class='mi'>2</span>
-<span class='o'>[</span><span class='mi'>3</span><span class='p'>,</span> <span class='mi'>4</span><span class='o'>]</span>
-<span class='mi'>5</span>
+<span class="o">&gt;&gt;</span> <span class="n">mix_and_match</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="o">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">]</span>
+<span class="mi">5</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">mix_and_match</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">*[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="o">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">]</span>
+<span class="mi">5</span>
 </code></pre></div>
+
 <p>The optional parameters have to occur in the middle only. You can have required parameters on either side or both sides only. Also, you can have only one parameter with splat operator and you can’t put it to the left of any default valued parameter.</p>
-<div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>example</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='o'>=</span><span class='mi'>1</span><span class='p'>,</span> <span class='n'>c</span> <span class='p'>,</span> <span class='o'>*</span><span class='n'>d</span><span class='p'>,</span> <span class='n'>e</span><span class='p'>)</span> <span class='c1'># invalid, required parameter in the middle</span>
-<span class='k'>def</span> <span class='nf'>example</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>c</span> <span class='p'>,</span> <span class='o'>*</span><span class='n'>d</span><span class='p'>,</span> <span class='n'>e</span><span class='p'>)</span> <span class='c1'># invalid, more than one splat parameter</span>
-<span class='k'>def</span> <span class='nf'>example</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span><span class='o'>*</span><span class='n'>b</span><span class='p'>,</span><span class='n'>c</span><span class='o'>=</span><span class='mi'>1</span><span class='p'>)</span> <span class='c1'># invalid, splat parameter to the left of default valued</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span> <span class="p">,</span> <span class="o">*</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="c1"># invalid, required parameter in the middle</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">c</span> <span class="p">,</span> <span class="o">*</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="c1"># invalid, more than one splat parameter</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="o">*</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># invalid, splat parameter to the left of default valued</span>
 </code></pre></div>
+
 <p>Ruby 2.0 introduces keyword arguments and double splat operator.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span><span class='k'>def</span> <span class='nf'>foo</span><span class='p'>(</span><span class='ss'>str</span><span class='p'>:</span> <span class='s2'>&quot;foo&quot;</span><span class='p'>,</span> <span class='ss'>num</span><span class='p'>:</span> <span class='mi'>42</span><span class='p'>,</span> <span class='o'>**</span><span class='n'>options</span><span class='p'>)</span>
-<span class='o'>&gt;&gt;</span>  <span class='nb'>p</span> <span class='n'>str</span><span class='p'>,</span> <span class='n'>num</span><span class='p'>,</span> <span class='n'>options</span>
-<span class='o'>&gt;&gt;</span><span class='k'>end</span>
 
-<span class='o'>&gt;&gt;</span><span class='n'>foo</span>
-<span class='s1'>&#39;foo&#39;</span>
-<span class='mi'>42</span>
-<span class='p'>{}</span>
+<div class="highlight"><pre><code class="ruby"><span class="o">&gt;&gt;</span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="ss">str</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="ss">num</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span>  <span class="nb">p</span> <span class="n">str</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">options</span>
+<span class="o">&gt;&gt;</span><span class="k">end</span>
 
-<span class='o'>&gt;&gt;</span><span class='n'>foo</span><span class='p'>(</span><span class='ss'>check</span><span class='p'>:</span> <span class='kp'>true</span><span class='p'>)</span>
-<span class='s1'>&#39;foo&#39;</span>
-<span class='mi'>42</span>
-<span class='p'>{</span><span class='ss'>check</span><span class='p'>:</span> <span class='kp'>true</span><span class='p'>}</span>
+<span class="o">&gt;&gt;</span><span class="n">foo</span>
+<span class="s1">&#39;foo&#39;</span>
+<span class="mi">42</span>
+<span class="p">{}</span>
+
+<span class="o">&gt;&gt;</span><span class="n">foo</span><span class="p">(</span><span class="ss">check</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span>
+<span class="s1">&#39;foo&#39;</span>
+<span class="mi">42</span>
+<span class="p">{</span><span class="ss">check</span><span class="p">:</span> <span class="kp">true</span><span class="p">}</span>
 </code></pre></div>
+
 <p>That’s it for this week.</p>
+
 </div>
 
 <hr id="comments-seperator">

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setting up Dev machine for rails"
+title:  "Setting up Dev machine for Rails"
 ---
 
 After grappling with UEFI, GPT, Driver issues and what not, finally I have reasonably stable dual boot system. I used to follow [this](http://geniitech.tumblr.com/post/25984445368/r) guide for setting up development environment, but it's a bit outdated. So I decided to log the process. Here is how I set up my machine for Rails development.

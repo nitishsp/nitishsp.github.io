@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Basic Ruby Literacy"
+title:  "Basic Ruby literacy"
 ---
 
 I am trying to gain better understanding of Ruby (and Rails). [The Well-Grounded Rubyist](http://www.manning.com/black2/) is my primary source of learning. This is the gist of things I learnt this weekend.

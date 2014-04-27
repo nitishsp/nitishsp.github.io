@@ -30,118 +30,129 @@
   <p>Ruby has a variety of control flow techniques that let you control the execution of the program. Many of them (e.g. if, while, etc..) are similar to their counterparts in other programming languages. This article focuses on syntax and idiosyncrasies of Ruby control flow techniques.</p>
 
 <p>Ruby provides <strong>if..else</strong>, <strong>unless..else</strong> and <strong>case</strong> constructs for conditional execution. <code>if..else</code> is same as other programming languages such as Python, Java, C. <code>unless</code> is opposite of <code>if</code>, its body gets executed if condition is false. If you are new to Ruby, you might find <code>unless</code> awkward to use, but as you code more and more in Ruby, you will intuitively start using unless. You can use <code>if !(condition)</code> or <code>if not condition</code> to achieve the same result as unless.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span>   <span class='n'>a</span> <span class='o'>=</span> <span class='kp'>true</span>
-<span class='o'>&gt;&gt;</span>   <span class='n'>b</span> <span class='o'>=</span> <span class='kp'>false</span>
-<span class='o'>&gt;&gt;</span>
-<span class='sc'>?&gt;</span>   <span class='k'>if</span> <span class='n'>a</span>
-<span class='o'>&gt;&gt;</span>     <span class='nb'>puts</span> <span class='s2'>&quot;Inside IF a&quot;</span>
-<span class='o'>&gt;&gt;</span>   <span class='k'>elsif</span> <span class='n'>b</span>
-<span class='o'>&gt;&gt;</span>     <span class='nb'>puts</span> <span class='s2'>&quot;Inside ELSE IF b&quot;</span>
-<span class='o'>&gt;&gt;</span>   <span class='k'>else</span>
-<span class='sc'>?&gt;</span>     <span class='nb'>puts</span> <span class='s2'>&quot;Inside ELSE&quot;</span>
-<span class='o'>&gt;&gt;</span>   <span class='k'>end</span>
-<span class='no'>Inside</span> <span class='no'>IF</span> <span class='n'>a</span>
-<span class='o'>&gt;&gt;</span>
-<span class='sc'>?&gt;</span>   <span class='k'>unless</span> <span class='n'>b</span>
-<span class='o'>&gt;&gt;</span>     <span class='nb'>puts</span> <span class='s2'>&quot;Inside UNLESS&quot;</span>
-<span class='o'>&gt;&gt;</span>   <span class='k'>else</span>
-<span class='sc'>?&gt;</span>     <span class='nb'>puts</span> <span class='s2'>&quot;Inside ELSE&quot;</span>
-<span class='o'>&gt;&gt;</span>   <span class='k'>end</span>
-<span class='no'>Inside</span> <span class='no'>UNLESS</span>
-<span class='o'>&gt;&gt;</span> <span class='c1'># This works too</span>
-<span class='o'>&gt;&gt;</span> <span class='nb'>puts</span> <span class='s2'>&quot;IF a is true&quot;</span> <span class='k'>if</span> <span class='n'>a</span>
-<span class='no'>IF</span> <span class='n'>a</span> <span class='n'>is</span> <span class='kp'>true</span>
-<span class='o'>&gt;&gt;</span> <span class='nb'>puts</span> <span class='s2'>&quot;IF b is false&quot;</span> <span class='k'>unless</span> <span class='n'>b</span>
-<span class='no'>IF</span> <span class='n'>b</span> <span class='n'>is</span> <span class='kp'>false</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">&gt;&gt;</span>   <span class="n">a</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="o">&gt;&gt;</span>   <span class="n">b</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="o">&gt;&gt;</span>
+<span class="sc">?&gt;</span>   <span class="k">if</span> <span class="n">a</span>
+<span class="o">&gt;&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Inside IF a&quot;</span>
+<span class="o">&gt;&gt;</span>   <span class="k">elsif</span> <span class="n">b</span>
+<span class="o">&gt;&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Inside ELSE IF b&quot;</span>
+<span class="o">&gt;&gt;</span>   <span class="k">else</span>
+<span class="sc">?&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Inside ELSE&quot;</span>
+<span class="o">&gt;&gt;</span>   <span class="k">end</span>
+<span class="no">Inside</span> <span class="no">IF</span> <span class="n">a</span>
+<span class="o">&gt;&gt;</span>
+<span class="sc">?&gt;</span>   <span class="k">unless</span> <span class="n">b</span>
+<span class="o">&gt;&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Inside UNLESS&quot;</span>
+<span class="o">&gt;&gt;</span>   <span class="k">else</span>
+<span class="sc">?&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Inside ELSE&quot;</span>
+<span class="o">&gt;&gt;</span>   <span class="k">end</span>
+<span class="no">Inside</span> <span class="no">UNLESS</span>
+<span class="o">&gt;&gt;</span> <span class="c1"># This works too</span>
+<span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;IF a is true&quot;</span> <span class="k">if</span> <span class="n">a</span>
+<span class="no">IF</span> <span class="n">a</span> <span class="n">is</span> <span class="kp">true</span>
+<span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;IF b is false&quot;</span> <span class="k">unless</span> <span class="n">b</span>
+<span class="no">IF</span> <span class="n">b</span> <span class="n">is</span> <span class="kp">false</span>
 </code></pre></div>
+
 <p>It is possible to assign value to a variable inside conditional test. In such cases, the return value of the assignment is considered while evaluating condition. Also, if a local variable is initialized in the body of a conditional it comes into existence even if conditional body containing the variable is not executed.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='n'>a</span> <span class='o'>=</span> <span class='mi'>1</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>if</span> <span class='p'>(</span><span class='n'>b</span> <span class='o'>=</span> <span class='n'>a</span><span class='p'>)</span>  <span class='c1'># b gets a&#39;s value, which is interpreted as true.</span>
-<span class='o'>&gt;&gt;</span>   <span class='nb'>puts</span> <span class='s2'>&quot;True that!&quot;</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>else</span>
-<span class='sc'>?&gt;</span>   <span class='n'>t1</span> <span class='o'>=</span> <span class='mi'>2</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>end</span>
-<span class='no'>True</span> <span class='n'>that!</span>
-<span class='o'>&gt;&gt;</span>
-<span class='sc'>?&gt;</span> <span class='nb'>p</span> <span class='n'>b</span>
-<span class='mi'>1</span>
-<span class='o'>&gt;&gt;</span> <span class='nb'>p</span> <span class='n'>t1</span> <span class='c1'># t1 is nil, NOT undefined</span>
-<span class='kp'>nil</span>
-<span class='o'>&gt;&gt;</span> <span class='nb'>p</span> <span class='n'>t2</span>
-<span class='ss'>NameError</span><span class='p'>:</span> <span class='n'>undefined</span> <span class='n'>local</span> <span class='n'>variable</span> <span class='ow'>or</span> <span class='nb'>method</span> <span class='sb'>`t2&#39; for main:Object</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;</span> <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">)</span>  <span class="c1"># b gets a&#39;s value, which is interpreted as true.</span>
+<span class="o">&gt;&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;True that!&quot;</span>
+<span class="o">&gt;&gt;</span> <span class="k">else</span>
+<span class="sc">?&gt;</span>   <span class="n">t1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;</span> <span class="k">end</span>
+<span class="no">True</span> <span class="n">that!</span>
+<span class="o">&gt;&gt;</span>
+<span class="sc">?&gt;</span> <span class="nb">p</span> <span class="n">b</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="n">t1</span> <span class="c1"># t1 is nil, NOT undefined</span>
+<span class="kp">nil</span>
+<span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="n">t2</span>
+<span class="ss">NameError</span><span class="p">:</span> <span class="n">undefined</span> <span class="n">local</span> <span class="n">variable</span> <span class="ow">or</span> <span class="nb">method</span> <span class="sb">`t2&#39; for main:Object</span>
 </code></pre></div>
+
 <p>In the above example, variable <code>t1</code> does not throw <code>NameError</code>. This is because when Ruby parses the code, it sees <code>t1 = 2</code> and allocates memory for <code>t1</code>. So t1 exists as result of parsing process but it is not assigned any value.</p>
 
 <p><code>case..when</code> is similar to C or Java’s switch case which one caveat. <code>when</code> does not use <code>==</code> to test equality, rather it uses <code>===</code> operator, which is syntactic sugar for method call <code>.===</code>. For most of the common Ruby classes such as <code>String</code>, <code>===</code> is same as <code>==</code>.</p>
-<div class='highlight'><pre><code class='ruby'><span class='k'>case</span> <span class='n'>test_var</span>
-<span class='k'>when</span> <span class='mi'>1</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;test_var is 1&quot;</span>
-<span class='k'>when</span> <span class='mi'>2</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;test_var is 2&quot;</span>
-<span class='k'>else</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;test_var is something else&quot;</span>
-<span class='k'>end</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">case</span> <span class="n">test_var</span>
+<span class="k">when</span> <span class="mi">1</span>
+  <span class="nb">puts</span> <span class="s2">&quot;test_var is 1&quot;</span>
+<span class="k">when</span> <span class="mi">2</span>
+  <span class="nb">puts</span> <span class="s2">&quot;test_var is 2&quot;</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="s2">&quot;test_var is something else&quot;</span>
+<span class="k">end</span>
 </code></pre></div>
+
 <p>Ruby provides <strong>loop</strong>(for unconditional looping), <strong>while</strong> and <strong>untill</strong> (for conditional looping) and <strong>for</strong> (for looping through a list of value). Ruby has <strong>break</strong> and <strong>next</strong> keywords which allow the program to exit looping block or skip remaining part of the iteration respectively.</p>
-<div class='highlight'><pre><code class='ruby'><span class='c1'>## Ruby Looping constructs for printing 1 to 10</span>
-<span class='n'>a</span> <span class='o'>=</span> <span class='mi'>1</span>
-<span class='kp'>loop</span> <span class='k'>do</span>
-  <span class='nb'>puts</span> <span class='n'>a</span>
-  <span class='n'>a</span> <span class='o'>+=</span> <span class='mi'>1</span>
-  <span class='k'>break</span> <span class='k'>if</span> <span class='n'>a</span> <span class='o'>&gt;</span> <span class='mi'>10</span>
-<span class='k'>end</span>
 
-<span class='n'>a</span> <span class='o'>=</span> <span class='mi'>1</span>
-<span class='k'>while</span> <span class='n'>a</span> <span class='o'>&lt;=</span> <span class='mi'>10</span>
-  <span class='nb'>puts</span> <span class='n'>a</span>
-  <span class='n'>a</span> <span class='o'>+=</span> <span class='mi'>1</span>
-<span class='k'>end</span>
+<div class="highlight"><pre><code class="ruby"><span class="c1">## Ruby Looping constructs for printing 1 to 10</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kp">loop</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="n">a</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">break</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span>
+<span class="k">end</span>
 
-<span class='c1'># until is same as while but with reverse logic</span>
-<span class='n'>a</span> <span class='o'>=</span> <span class='mi'>1</span>
-<span class='k'>until</span> <span class='n'>a</span> <span class='o'>&gt;</span> <span class='mi'>10</span>
-  <span class='nb'>puts</span> <span class='n'>a</span>
-  <span class='n'>a</span> <span class='o'>+=</span> <span class='mi'>1</span>
-<span class='k'>end</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span>
+  <span class="nb">puts</span> <span class="n">a</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
 
-<span class='c1'># Similar to do..while in C, Java.</span>
-<span class='n'>a</span> <span class='o'>=</span> <span class='mi'>1</span>
-<span class='k'>begin</span>
-  <span class='nb'>puts</span> <span class='n'>a</span>
-  <span class='n'>a</span> <span class='o'>+=</span> <span class='mi'>1</span>
-<span class='k'>end</span> <span class='k'>while</span> <span class='n'>a</span> <span class='o'>&lt;=</span> <span class='mi'>10</span>
+<span class="c1"># until is same as while but with reverse logic</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">until</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span>
+  <span class="nb">puts</span> <span class="n">a</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
 
-<span class='c1'># for is similar to its counterpart in Python</span>
-<span class='n'>lst</span> <span class='o'>=</span> <span class='o'>[</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>,</span> <span class='mi'>5</span><span class='p'>,</span> <span class='mi'>6</span><span class='p'>,</span> <span class='mi'>7</span><span class='p'>,</span> <span class='mi'>8</span><span class='p'>,</span> <span class='mi'>9</span><span class='p'>,</span> <span class='mi'>10</span><span class='o'>]</span>
-<span class='k'>for</span> <span class='n'>a</span> <span class='k'>in</span> <span class='n'>lst</span>
-  <span class='nb'>puts</span> <span class='n'>a</span>
-<span class='k'>end</span>
+<span class="c1"># Similar to do..while in C, Java.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">begin</span>
+  <span class="nb">puts</span> <span class="n">a</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span> <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span>
+
+<span class="c1"># for is similar to its counterpart in Python</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="o">]</span>
+<span class="k">for</span> <span class="n">a</span> <span class="k">in</span> <span class="n">lst</span>
+  <span class="nb">puts</span> <span class="n">a</span>
+<span class="k">end</span>
 </code></pre></div>
+
 <p>An <strong>exception</strong> in Ruby is a special kind of object of class <strong>Exception</strong> or its descendants. Ruby provides <strong>rescue</strong> clause to handle exceptions and <strong>ensure</strong> clause to make sure that certain code gets executed whether an exception is thrown or not. Ruby’s <code>begin..rescue..ensure</code> is similar to Java’s <code>try..catch..finally</code> block. You can raise exception programatically using <strong>raise</strong> keyword. While rescuing from an exception, you can catch the thrown exception object using special operator <code>=&gt;</code>. Here is a contrived example that tries to explain the constructs.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;&gt;</span> <span class='k'>begin</span>
-<span class='sc'>?&gt;</span>   <span class='k'>raise</span> <span class='no'>RuntimeError</span><span class='p'>,</span> <span class='s2'>&quot;Problem occurred!&quot;</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>rescue</span> <span class='no'>RuntimeError</span> <span class='o'>=&gt;</span> <span class='n'>e</span>
-<span class='o'>&gt;&gt;</span>   <span class='nb'>puts</span> <span class='s2'>&quot;Handled:&quot;</span>
-<span class='o'>&gt;&gt;</span>   <span class='nb'>p</span> <span class='n'>e</span>
-<span class='o'>&gt;&gt;</span>   <span class='nb'>puts</span> <span class='s1'>&#39;-----------&#39;</span>
-<span class='o'>&gt;&gt;</span>   <span class='c1'># re-raising Exception to pass it up the call stack</span>
-<span class='sc'>?&gt;</span>   <span class='k'>raise</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>ensure</span>
-<span class='sc'>?&gt;</span>   <span class='nb'>puts</span> <span class='s2'>&quot;I will get executed for sure&quot;</span>
-<span class='o'>&gt;&gt;</span> <span class='k'>end</span>
-<span class='ss'>Handled</span><span class='p'>:</span>
-<span class='c1'>#&lt;RuntimeError: Problem occurred!&gt;</span>
-<span class='o'>-----------</span>
-<span class='n'>I</span> <span class='n'>will</span> <span class='n'>get</span> <span class='n'>executed</span> <span class='k'>for</span> <span class='n'>sure</span>
-<span class='ss'>RuntimeError</span><span class='p'>:</span> <span class='no'>Problem</span> <span class='n'>occurred!</span>
-        <span class='n'>from</span> <span class='p'>(</span><span class='n'>irb</span><span class='p'>):</span><span class='mi'>2</span>
-        <span class='o'>.</span><span class='n'>.</span><span class='o'>.</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">&gt;&gt;</span> <span class="k">begin</span>
+<span class="sc">?&gt;</span>   <span class="k">raise</span> <span class="no">RuntimeError</span><span class="p">,</span> <span class="s2">&quot;Problem occurred!&quot;</span>
+<span class="o">&gt;&gt;</span> <span class="k">rescue</span> <span class="no">RuntimeError</span> <span class="o">=&gt;</span> <span class="n">e</span>
+<span class="o">&gt;&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;Handled:&quot;</span>
+<span class="o">&gt;&gt;</span>   <span class="nb">p</span> <span class="n">e</span>
+<span class="o">&gt;&gt;</span>   <span class="nb">puts</span> <span class="s1">&#39;-----------&#39;</span>
+<span class="o">&gt;&gt;</span>   <span class="c1"># re-raising Exception to pass it up the call stack</span>
+<span class="sc">?&gt;</span>   <span class="k">raise</span>
+<span class="o">&gt;&gt;</span> <span class="k">ensure</span>
+<span class="sc">?&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;I will get executed for sure&quot;</span>
+<span class="o">&gt;&gt;</span> <span class="k">end</span>
+<span class="ss">Handled</span><span class="p">:</span>
+<span class="c1">#&lt;RuntimeError: Problem occurred!&gt;</span>
+<span class="o">-----------</span>
+<span class="n">I</span> <span class="n">will</span> <span class="n">get</span> <span class="n">executed</span> <span class="k">for</span> <span class="n">sure</span>
+<span class="ss">RuntimeError</span><span class="p">:</span> <span class="no">Problem</span> <span class="n">occurred!</span>
+        <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">2</span>
+        <span class="o">.</span><span class="n">.</span><span class="o">.</span>
 </code></pre></div>
+
 <p>In the above example, <code>raise RuntimeError</code> is syntactic sugar for <code>raise RuntimeError.new</code>. You raise exception object, not class.</p>
 
 <p>If Ruby’s built-in exceptions do not suit your needs, you can define you own exception class by subclassing <code>Exception</code> or one of its descendants.</p>
 
 <p>That’s it for now. In the next article we will take a look at more powerful control flow constructs, code block.</p>
+
 </div>
 
 <hr id="comments-seperator">

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Setting up Dev machine for rails</title>
+    <title>Setting up Dev machine for Rails</title>
     <meta name="viewport" content="width=device-width">
 
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Raleway:400' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="post-header">
-  <div>Setting up Dev machine for rails</div>
+  <div>Setting up Dev machine for Rails</div>
   <p class="meta">20 Apr 2014</p>
 </div>
 
@@ -30,50 +30,54 @@
   <p>After grappling with UEFI, GPT, Driver issues and what not, finally I have reasonably stable dual boot system. I used to follow <a href="http://geniitech.tumblr.com/post/25984445368/r">this</a> guide for setting up development environment, but it’s a bit outdated. So I decided to log the process. Here is how I set up my machine for Rails development.</p>
 
 <h2 id="ubuntu">Ubuntu</h2>
-
 <p>Before installing the tools, I ensure that all the installed packages and the package index itself is updated.</p>
-<div class='highlight'><pre><code class='bash'><span class='c'># Fetch latest packages info from sources</span>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># Fetch latest packages info from sources</span>
 sudo apt-get update
 
-<span class='c'># Update all installed packages</span>
+<span class="c"># Update all installed packages</span>
 sudo apt-get dist-upgrade
 
-<span class='c'># If you want to play safe, use replace &#39;dist-upgrade&#39; with &#39;upgrade&#39;</span>
+<span class="c"># If you want to play safe, use replace &#39;dist-upgrade&#39; with &#39;upgrade&#39;</span>
 </code></pre></div>
+
 <p>man page of apt-get has detailed explanation for <code>update</code>, <code>dist-upgrade</code> and <code>upgrade</code>.</p>
 
-<h2 id="sublime_text">Sublime Text</h2>
-
+<h2 id="sublime-text">Sublime Text</h2>
 <p><a href="http://www.sublimetext.com/">Sublime Text</a> has been my favorite text editor ever since I got outside the Java world and started exploring Python and Ruby. It’s lightweight, has great plugins and gives a lot of customization options. Here are my overrides for its default settings,</p>
-<div class='highlight'><pre><code class='javascript'><span class='c1'>// Settings:</span>
-<span class='p'>{</span>
-  <span class='c1'>// The number of spaces a tab is considered equal to</span>
-  <span class='s2'>&quot;tab_size&quot;</span><span class='o'>:</span> <span class='mi'>2</span><span class='p'>,</span>
 
-  <span class='c1'>// Set to true to insert spaces when tab is pressed</span>
-  <span class='s2'>&quot;translate_tabs_to_spaces&quot;</span><span class='o'>:</span> <span class='kc'>true</span><span class='p'>,</span>
+<div class="highlight"><pre><code class="javascript"><span class="c1">// Settings:</span>
+<span class="p">{</span>
+  <span class="c1">// The number of spaces a tab is considered equal to</span>
+  <span class="s2">&quot;tab_size&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
 
-  <span class='c1'>// Set to true to removing trailing white space on save</span>
-  <span class='s2'>&quot;trim_trailing_white_space_on_save&quot;</span><span class='o'>:</span> <span class='kc'>true</span><span class='p'>,</span>
-<span class='p'>}</span>
+  <span class="c1">// Set to true to insert spaces when tab is pressed</span>
+  <span class="s2">&quot;translate_tabs_to_spaces&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
 
-<span class='c1'>// Keybindings:</span>
-<span class='p'>[</span>
-  <span class='p'>{</span> <span class='s2'>&quot;keys&quot;</span><span class='o'>:</span> <span class='p'>[</span><span class='s2'>&quot;ctrl+shift+o&quot;</span><span class='p'>],</span> <span class='s2'>&quot;command&quot;</span><span class='o'>:</span> <span class='s2'>&quot;prompt_open_folder&quot;</span> <span class='p'>}</span>
-<span class='p'>]</span>
+  <span class="c1">// Set to true to removing trailing white space on save</span>
+  <span class="s2">&quot;trim_trailing_white_space_on_save&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1">// Keybindings:</span>
+<span class="p">[</span>
+  <span class="p">{</span> <span class="s2">&quot;keys&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+shift+o&quot;</span><span class="p">],</span> <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;prompt_open_folder&quot;</span> <span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div>
+
 <p>The easiest way of installing sublime packages is using <a href="https://sublime.wbond.net/">Sublime Package Control</a>. Just go to its site and follow the installation instructions. Once you have installed Sublime Package Control, all you have to do is press <code>Ctrl + Shift + P</code>, go to <code>Package Control: Install Packages</code> and select the package you want to install. One package I find very useful is <a href="https://github.com/jisaacks/GitGutter">GitGutter</a>. It shows an icon in the gutter indicating if line has been inserted, modified or deleted.</p>
 
 <h2 id="terminal">Terminal</h2>
-
 <p>The default terminal included in Ubuntu is fine for initial setup but for regular use I prefer dropdown terminals. They stay out of your way and you can conjure them when required. I started with yakuake but it has a lot of KDE dependencies, so I switched to tilda, which is really lightweight.</p>
-<div class='highlight'><pre><code class='bash'>sudo apt-get install tilda
-</code></pre></div>
-<h2 id="git">Git</h2>
 
-<p><a href="http://git-scm.com/">Git</a> is probably the most popular version control system in the Open Source community. Most of my recent code is on GitHub. In fact, this blog itself is hosted on GitHub.</p>
-<div class='highlight'><pre><code class='bash'>sudo apt-get install git
+<div class="highlight"><pre><code class="bash">sudo apt-get install tilda
 </code></pre></div>
+
+<h2 id="git">Git</h2>
+<p><a href="http://git-scm.com/">Git</a> is probably the most popular version control system in the Open Source community. Most of my recent code is on GitHub. In fact, this blog itself is hosted on GitHub.</p>
+
+<div class="highlight"><pre><code class="bash">sudo apt-get install git
+</code></pre></div>
+
 <p>Here is my <code>~/.gitconfig</code> file:</p>
 
 <pre><code>[user]
@@ -85,48 +89,53 @@ sudo apt-get dist-upgrade
   co = checkout
   s = status
   b = branch
-  hist = log --pretty=format:&#39;%h %ad | %s%d [%an]&#39; --branches --graph --date=short --max-count=10</code></pre>
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --branches --graph --date=short --max-count=10
+</code></pre>
 
 <p>Git aliases are shorthands for long git commands. Before I discovered them I almost always used to misspell status. Now it’s just <code>git s</code>!</p>
 
 <p>Finally, I generate ssh key and add it to GitHub as explained in <a href="https://help.github.com/articles/generating-ssh-keys">this</a> article.</p>
 
 <h2 id="ruby">Ruby</h2>
-
 <p>I use <a href="https://rvm.io/">RVM</a> to install Ruby. Its installation is pretty straightforward. Once you have RVM, you can install multiple ruby environments and switch among them as and when required.</p>
-<div class='highlight'><pre><code class='bash'><span class='c'># List all available rubies</span>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># List all available rubies</span>
 rvm list known
 
-<span class='c'># Install a ruby</span>
+<span class="c"># Install a ruby</span>
 rvm install 2.1.1
 
-<span class='c'># Show currently installed rubies</span>
+<span class="c"># Show currently installed rubies</span>
 rvm list
 
-<span class='c'># Switch ruby</span>
+<span class="c"># Switch ruby</span>
 rvm use 2.1.1
 
-<span class='c'># Set default ruby</span>
+<span class="c"># Set default ruby</span>
 rvm use --default 2.1.1
 </code></pre></div>
+
 <p>For RVM to work properly, you have to pass <code>--login</code> flag to the shell. The way of doing this differs from terminal to terminal. <a href="http://stackoverflow.com/a/9337014">This</a> answer provides little explanation and links to appropriate resources. For tilda, set <em>Preferences &gt; Custom Command</em> to <code>/bin/bash --login</code>.</p>
 
 <p>I don’t use rdoc, so by default I don’t want to download rdoc and ri info for any gems. This can be achieved by adding the following line to <code>~/.gemrc</code>.</p>
 
-<pre><code>gem: --no-rdoc --no-ri</code></pre>
+<pre><code>gem: --no-rdoc --no-ri
+</code></pre>
 
 <p>I used to use RVM gemsets. But with bundler, Gemsets are not required. So I have stopped using them.</p>
 
 <h2 id="mysql">MySQL</h2>
-<div class='highlight'><pre><code class='bash'>sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+
+<div class="highlight"><pre><code class="bash">sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 gem install mysql2
 </code></pre></div>
-<h2 id="apache_and_passenger">Apache and Passenger</h2>
 
+<h2 id="apache-and-passenger">Apache and Passenger</h2>
 <p>Though Webrick or Thin are great for development, it’s nice to have <a href="http://www.apache.org/">Apache</a> and <a href="https://www.phusionpassenger.com/">Passenger</a> around.</p>
-<div class='highlight'><pre><code class='bash'>sudo apt-get install apache2
 
-<span class='c'># for asset pipeline</span>
+<div class="highlight"><pre><code class="bash">sudo apt-get install apache2
+
+<span class="c"># for asset pipeline</span>
 sudo a2enmod headers
 sudo a2enmod expires
 
@@ -134,34 +143,40 @@ gem install passenger
 
 passenger-install-apache2-module
 
-<span class='c'># Dependencies:</span>
-<span class='c'># sudo apt-get install apache2-threaded-dev libapr1-dev libaprutil1-dev libcurl4-gnutls-dev</span>
+<span class="c"># Dependencies:</span>
+<span class="c"># sudo apt-get install apache2-threaded-dev libapr1-dev libaprutil1-dev libcurl4-gnutls-dev</span>
 </code></pre></div>
+
 <p>At the end, passenger will tell you to copy paste a few lines to apache configuration file.</p>
 
 <pre><code>LoadModule passenger_module /home/nitish/.rvm/gems/ruby-2.1.1/gems/passenger-4.0.41/buildout/apache2/mod_passenger.so
 &lt;IfModule mod_passenger.c&gt;
  PassengerRoot /home/nitish/.rvm/gems/ruby-2.1.1/gems/passenger-4.0.41
  PassengerDefaultRuby /home/nitish/.rvm/gems/ruby-2.1.1/wrappers/ruby
-&lt;/IfModule&gt;</code></pre>
+&lt;/IfModule&gt;
+</code></pre>
 
-<h2 id="javascript_runtime_environment">Javascript Runtime environment</h2>
-
+<h2 id="javascript-runtime-environment">Javascript Runtime environment</h2>
 <p>Rails asset pipeline requires Javascript Runtime environment to compile CoffeeScript, uglify JS, etc. You can use therubyracer gem but I prefer <a href="http://nodejs.org/">NodeJS</a>, since it’s a dependency for a lot of dev tools.</p>
-<div class='highlight'><pre><code class='bash'>sudo add-apt-repository ppa:chris-lea/node.js
+
+<div class="highlight"><pre><code class="bash">sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install python-software-properties python g++ make nodejs
-<span class='c'># source</span>
-<span class='c'># https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint-elementary-os</span>
+<span class="c"># source</span>
+<span class="c"># https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint-elementary-os</span>
 </code></pre></div>
+
 <h2 id="miscellaneous">Miscellaneous</h2>
-<div class='highlight'><pre><code class='bash'><span class='c'># required by paperclip</span>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># required by paperclip</span>
 sudo apt-get install imagemagick
 
-<span class='c'># nokogiri dependencies</span>
+<span class="c"># nokogiri dependencies</span>
 sudo apt-get install libxslt-dev libxml2-dev
 </code></pre></div>
+
 <p>That’s it. Happy Coding! :)</p>
+
 </div>
 
 <hr id="comments-seperator">

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Basic Ruby Literacy</title>
+    <title>Basic Ruby literacy</title>
     <meta name="viewport" content="width=device-width">
 
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Raleway:400' rel='stylesheet' type='text/css'>
@@ -22,14 +22,14 @@
         </div>
 
         <div class="post-header">
-  <div>Basic Ruby Literacy</div>
+  <div>Basic Ruby literacy</div>
   <p class="meta">06 Jan 2014</p>
 </div>
 
 <div class="post">
   <p>I am trying to gain better understanding of Ruby (and Rails). <a href="http://www.manning.com/black2/">The Well-Grounded Rubyist</a> is my primary source of learning. This is the gist of things I learnt this weekend.</p>
 
-<p>Lets start with irb. <strong>irb</strong> or <strong>Interactive Ruby Shell</strong> is command line REPL tool that ships with ruby. I prefer starting irb with <code>--simple-prompt</code>, a command line options which results in a concise prompt. irb a great for toying with the language, for anything useful, you would save the ruby code in <strong>.rb</strong> file and run it using <strong>ruby interpreter</strong>. The ruby interpreter provides a lot of command line flags. The flag <code>-e</code> allows us to provide inline script to the interpreter, Ex. <code>ruby -e &#39;puts 2 ** 4&#39;</code>. Another useful combination of flags is <code>-cw</code>. <code>-c</code> causes ruby to check the syntax of ruby program without executing it and <code>-w</code> enables verbose mode without printing the version information.</p>
+<p>Lets start with irb. <strong>irb</strong> or <strong>Interactive Ruby Shell</strong> is command line REPL tool that ships with ruby. I prefer starting irb with <code>--simple-prompt</code>, a command line options which results in a concise prompt. irb a great for toying with the language, for anything useful, you would save the ruby code in <strong>.rb</strong> file and run it using <strong>ruby interpreter</strong>. The ruby interpreter provides a lot of command line flags. The flag <code>-e</code> allows us to provide inline script to the interpreter, Ex. <code>ruby -e 'puts 2 ** 4'</code>. Another useful combination of flags is <code>-cw</code>. <code>-c</code> causes ruby to check the syntax of ruby program without executing it and <code>-w</code> enables verbose mode without printing the version information.</p>
 
 <p>When running ruby program from files, <strong>gets</strong> is used to read a line from standard input stream. There are 3 functions to write to standard output: print, puts and p. <strong>print</strong> writes the given object to standard output stream. <strong>puts</strong> is similar to print but appends a newline character at the end if its not already present. <strong>p</strong> outputs inspect string of object. <code>p &lt;object&gt;</code> is same as <code>puts &lt;object&gt;.inspect</code>.</p>
 
@@ -37,21 +37,24 @@
 
 <p>Ruby has a modest list of <strong>identifiers</strong>: Variables, Constants, Keywords and method names. There are 4 types of variables: Local variables (start with a lowercase letter or _ and consist of letters, underscores and or digits), Instance variables (start with single @ sign), Class variables (start with @@) and Global variables (start with $). Constants begin with an uppercase letter. Keywords are reserved words in ruby.</p>
 
-<p>In ruby almost <strong>everything is an object</strong>. Objects are represented by their literal form or by the variables that refer to them. Each object is capable of understanding a set of messages. Each message that an object understands corresponds directly to a method. If there is no corresponding method, objects can try to interpret the message on the fly and try to make sense of it. The <strong>dot</strong> operator (.) is the most common way of sending messages to an object. The message to the right of the dot is sent to the object on the left. Ex. In <code>&quot;foobar&quot;.upcase</code>, the message upcase is sent to the string “foobar”. Like other languages with classical inheritance, a Ruby object is an instance of exactly one class. But in ruby, objects can acquire new behaviours that were not defined in their class.</p>
+<p>In ruby almost <strong>everything is an object</strong>. Objects are represented by their literal form or by the variables that refer to them. Each object is capable of understanding a set of messages. Each message that an object understands corresponds directly to a method. If there is no corresponding method, objects can try to interpret the message on the fly and try to make sense of it. The <strong>dot</strong> operator (.) is the most common way of sending messages to an object. The message to the right of the dot is sent to the object on the left. Ex. In <code>"foobar".upcase</code>, the message upcase is sent to the string “foobar”. Like other languages with classical inheritance, a Ruby object is an instance of exactly one class. But in ruby, objects can acquire new behaviours that were not defined in their class.</p>
 
 <p>While working with ruby code in multiple files, you are often required to load/execute content of a program from within another ruby program. Ruby provides <strong>load</strong> and <strong>require</strong> methods for this purpose. A call to load always loads the file whereas require loads the file only once. require doesn’t need file extension. This allows you to load extensions written in c and ruby in the same way (because file extension is not needed). Unless absolute path is given, require and load look for the specified file in load path (a list of directories). Ruby 1.9.2 added another method <strong>require_relative</strong> which allows you to load a file relative to the file containing require_relative.</p>
 
 <p>You can get information about your ruby installation using a library package <strong>rbconfig</strong>. The information is available in hash data structure bound to a constant, <code>Config::CONFIG</code>. Here are a few important directories in ruby installation.</p>
-<div class='highlight'><pre><code class='ruby'><span class='no'>Config</span><span class='o'>::</span><span class='no'>CONFIG</span><span class='o'>[</span><span class='s2'>&quot;bindir&quot;</span><span class='o'>]</span> <span class='c1'># executables like irb, ruby</span>
-<span class='no'>Config</span><span class='o'>::</span><span class='no'>CONFIG</span><span class='o'>[</span><span class='s2'>&quot;libdir&quot;</span><span class='o'>]</span> <span class='c1'># standard library files</span>
-<span class='no'>Config</span><span class='o'>::</span><span class='no'>CONFIG</span><span class='o'>[</span><span class='s2'>&quot;archdir&quot;</span><span class='o'>]</span> <span class='c1'># C extensions</span>
-<span class='no'>Config</span><span class='o'>::</span><span class='no'>CONFIG</span><span class='o'>[</span><span class='s2'>&quot;sitedir&quot;</span><span class='o'>]</span> <span class='c1'># third party extensions and libraries</span>
-<span class='no'>Config</span><span class='o'>::</span><span class='no'>CONFIG</span><span class='o'>[</span><span class='s2'>&quot;vendordir&quot;</span><span class='o'>]</span> <span class='c1'># third party extensions and libraries</span>
-<span class='c1'># There is also a &#39;gems&#39; directory at the same level as sitedir which stores ruby gems.</span>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">Config</span><span class="o">::</span><span class="no">CONFIG</span><span class="o">[</span><span class="s2">&quot;bindir&quot;</span><span class="o">]</span> <span class="c1"># executables like irb, ruby</span>
+<span class="no">Config</span><span class="o">::</span><span class="no">CONFIG</span><span class="o">[</span><span class="s2">&quot;libdir&quot;</span><span class="o">]</span> <span class="c1"># standard library files</span>
+<span class="no">Config</span><span class="o">::</span><span class="no">CONFIG</span><span class="o">[</span><span class="s2">&quot;archdir&quot;</span><span class="o">]</span> <span class="c1"># C extensions</span>
+<span class="no">Config</span><span class="o">::</span><span class="no">CONFIG</span><span class="o">[</span><span class="s2">&quot;sitedir&quot;</span><span class="o">]</span> <span class="c1"># third party extensions and libraries</span>
+<span class="no">Config</span><span class="o">::</span><span class="no">CONFIG</span><span class="o">[</span><span class="s2">&quot;vendordir&quot;</span><span class="o">]</span> <span class="c1"># third party extensions and libraries</span>
+<span class="c1"># There is also a &#39;gems&#39; directory at the same level as sitedir which stores ruby gems.</span>
 </code></pre></div>
+
 <p>Ruby also comes with a set of command line tools. <strong>RDoc</strong> (Ruby Documentation) turns comments put in code in specified format into documentation. <strong>ri</strong> (Ruby Index) gives you a way to access information extracted by RDoc. <strong>rake</strong> is a task management utility (like make) which allows you to write tasks using ruby syntax.</p>
 
 <p>That’s it for now. Excited about learning new things next week.</p>
+
 </div>
 
 <hr id="comments-seperator">
