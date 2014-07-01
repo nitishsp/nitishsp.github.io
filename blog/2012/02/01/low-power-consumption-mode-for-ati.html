@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Low Power Consumption Mode for ATI cards in Fedora</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Raleway:400' rel='stylesheet' type='text/css'>
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="site">
+        <div class="header">
+          <h1 class="title"><a href="/blog/">Nitish's Blog</a></h1>
+        </div>
+
+        <div class="post-header">
+  <div>Low Power Consumption Mode for ATI cards in Fedora</div>
+  <p class="meta">01 Feb 2012</p>
+</div>
+
+<div class="post">
+  <p>I have ATI Radeon HD 4570 graphics card. Ever since I started using Fedora, I couldn’t properly install drivers for my graphics card. It’s hell lot of difficult to get ATI drivers working on Fedora. Last week, when I installed proprietary ATI drivers on F16, the OS just stopped working. It would stop loading just before the login-prompt. This time I decided not to pursue the problem &amp; did a rollback.</p>
+
+<p>Somewhere on the internet I found this:</p>
+
+<pre><code>echo low &amp; /sys/class/drm/card0/device/power_profile
+</code></pre>
+
+<p>It sets the graphic card to low power consumption mode. Upon using my laptop in this mode for a few days I noticed that this has solved the overheating problem to some extent. So I would definitely recommend it over installing crappy ATI drivers. Still its far from what I get on Windows Vista so I am considering switching to Ubuntu when its next LTS version is released.</p>
+
+</div>
+
+<hr id="comments-seperator">
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nitishsp';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>No JS, No comments!</noscript>
+
+
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>

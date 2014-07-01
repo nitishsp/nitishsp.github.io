@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google App Engine Launcher in Fedora</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Raleway:400' rel='stylesheet' type='text/css'>
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="site">
+        <div class="header">
+          <h1 class="title"><a href="/blog/">Nitish's Blog</a></h1>
+        </div>
+
+        <div class="post-header">
+  <div>Google App Engine Launcher in Fedora</div>
+  <p class="meta">09 Dec 2012</p>
+</div>
+
+<div class="post">
+  <p>Google App Engine launcher is a handy tool for GAE development. Although GAE sdk and command line are sufficient, one click execution\deployment is often more convenient. When I was installing GAE launcher I couldn’t find a single guide for Fedora, hence this post. I am using Fedora 16 + LXDE.  This post assumes that you already have <a href="https://developers.google.com/appengine/downloads">GAE sdk</a></p>
+
+<h2 id="get-the-prerequisites">Get the prerequisites</h2>
+<pre><code>sudo yum install wxGlade wxPython
+</code></pre>
+
+<h2 id="download-source-code">Download source code</h2>
+
+<p>The app engine launcher source is available on code.google.com.  If you have subversion installed, go to <a href="https://developers.google.com/appengine/downloads">this</a> link and follow the instructions. If you don’t have subversion, you can use wget as follows:
+    wget -m -np http://google-appengine-wx-launcher.googlecode.com/svn/trunk/ google-appengine-wx-launcher-read-only
+This command will fetch the code and put it in <code>./google-appengine-wx-launcher.googlecode.com/svn/trunk</code>. You can move the code to another directory. I copied the content of trunk directory to <code>/opt/appengine_launcher</code></p>
+
+<h2 id="create-a-desktop-entry">Create a desktop entry</h2>
+<p>Save the following text to <code>/usr/share/applications/gae.desktop</code> (make sure you use correct path in Exec parameter)</p>
+
+<pre><code>[Desktop Entry]
+Encoding=UTF-8
+Name=App Engine Launcher
+Categories=Development;
+Type=Application
+Exec=python /opt/appengine_launcher/GoogleAppEngineLauncher.py
+Icon=AppEngine
+</code></pre>
+
+<h2 id="icon-for-desktop-entry">Icon for desktop entry</h2>
+<p>Copy <code>AppEngine.png</code> inside images directory to <code>/usr/share/icons/</code> and Done!</p>
+
+<p>GAE launcher should appear in the programming section. You’ll probably need to configure path to gae sdk the first time you run it. Set it in GAE Launcher preferences.</p>
+
+<p>Thats it! Happy Coding!</p>
+
+</div>
+
+<hr id="comments-seperator">
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nitishsp';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>No JS, No comments!</noscript>
+
+
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>

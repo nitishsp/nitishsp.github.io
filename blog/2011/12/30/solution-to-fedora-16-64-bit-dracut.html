@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Solution to Fedora 16 (64-bit) Dracut problem</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Raleway:400' rel='stylesheet' type='text/css'>
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="site">
+        <div class="header">
+          <h1 class="title"><a href="/blog/">Nitish's Blog</a></h1>
+        </div>
+
+        <div class="post-header">
+  <div>Solution to Fedora 16 (64-bit) Dracut problem</div>
+  <p class="meta">30 Dec 2011</p>
+</div>
+
+<div class="post">
+  <p>I had been using Fedora 14 before I decided to switch to Fedora 16. So I downloaded 64-bit iso and created a live usb media using <a href="https://fedorahosted.org/liveusb-creator/">Live USB Creator</a>. When I tried to boot off the usb, I got the following error:</p>
+
+<pre><code>dracut Warning: No root device "live:/dev/disk/by-uuid/FOEC-AD4C" found.
+dropping to debug shell.
+sh: can't access tty; Job control turned off
+dracut:/#
+</code></pre>
+
+<p>I found a lot of people getting the same error with no thread/post pointing to the exact solution. Finally I came across <a href="http://www.fedoraforum.org/forum/showpost.php?p=1476942&amp;postcount=3">solution to a similar problem</a> thanks to <a href="http://www.fedoraforum.org/forum/member.php?u=183341">kylerconway</a> on fedoraforums.</p>
+
+<p>The solution is quite simple,</p>
+
+<ol>
+  <li>In the debug shell, type <code>ls -l /dev/disk/by-uuid/</code> to find UUID of your boot media. (you may run <code>ls -l /dev/disk/by-label/</code> to get better understanding of your disk drives)</li>
+  <li>Once you have UUID of your boot media, reboot and edit GRUB boot command &amp; replace existing UUID with the one found in step 1.</li>
+</ol>
+
+<p>Fedora 16 with GNOME 3.2 looks brilliant (I switched from F14). Also, after using it for a while I found it less buggy. If you are still using Fedora 14, I guess its the right time to switch!</p>
+
+<p><img src="http://1.bp.blogspot.com/-PkAu-S4cUq0/Tv3jvyebVjI/AAAAAAAAAVM/wUW1LnzolRU/s640/Screenshot+at+2011-12-10+23%253A01%253A23.png" alt="Fedora 16" /></p>
+
+</div>
+
+<hr id="comments-seperator">
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nitishsp';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>No JS, No comments!</noscript>
+
+
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>

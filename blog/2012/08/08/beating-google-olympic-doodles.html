@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Beating Google Olympic Doodles</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Raleway:400' rel='stylesheet' type='text/css'>
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="site">
+        <div class="header">
+          <h1 class="title"><a href="/blog/">Nitish's Blog</a></h1>
+        </div>
+
+        <div class="post-header">
+  <div>Beating Google Olympic Doodles</div>
+  <p class="meta">08 Aug 2012</p>
+</div>
+
+<div class="post">
+  <p>Google has been creating interactive doodles for a while now. I am a big fan of these doodles. So when Google launched their <a href="https://www.google.com/doodles/hurdles-2012">first interactive Olympic doodle</a> last night, I was hooked to it. Soon my friends started posting their high scores and my best score was far from theirs. I played for a while but soon lost interest. So I decided to try programming.</p>
+
+<p>Few months ago I had come across <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html">Robot</a> class in Java. I used it to simulate keystrokes from java program. Here is what Java Documentation says about Robot:</p>
+
+<blockquote>
+  <p>This class is used to generate native system input events  for the purposes of test automation, self-running demos, and  other applications where control of the mouse and keyboard  is needed. The primary purpose of Robot is to facilitate  automated testing of Java platform implementations.</p>
+</blockquote>
+
+<p>I created a java program that simulates left-right keystrokes for <a href="https://www.google.com/doodles/hurdles-2012">the hurdles doodle</a>. I didn’t hardcode the jumping part because that would have required a lot of trial and error and would have taken the fun out of it. So you still have to jump the hurdles yourself. With the help of my program I clocked 9.6, better than any of my friends.</p>
+
+<p>Next day Google launched <a href="https://www.google.com/doodles/basketball-2012">the basketball doodle</a>. I played it for a while and realized that unlike the hurdles doodle, this doodle could be completely automated without extensive trial and error. So I modified the previous code and scored 42 pts in it. It was amusing to see it in action.</p>
+
+<p>Both the programs are simple and easy to understand. The source codes can be found on pastebin.
++ <a href="http://pastebin.com/xwzC6kbb">Hurdles Doodle in Java</a>
++ <a href="http://pastebin.com/8XahSUXK">Basketball Doodle in Java</a></p>
+
+<h2 id="update">UPDATE</h2>
+
+<p>There are some hacks in JavaScript that make the runner go faster. It is perhaps much easier to do the above programs in JavaScript. But my intention wasn’t to hack the doodles, I just wanted to see if it could be done using Java .</p>
+
+<p>Google’s view on this cheating stuff is interesting (<a href="http://mashable.com/2012/08/07/google-doodles-olympics/">Mashable</a>):</p>
+
+<blockquote>
+  <p>“Our hope is that people will want to play a fair game, but we also  understand that for some people cheating is in fact an engineering  challenge — its own kind of programming Olympics.”</p>
+</blockquote>
+
+</div>
+
+<hr id="comments-seperator">
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nitishsp';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>No JS, No comments!</noscript>
+
+
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>
