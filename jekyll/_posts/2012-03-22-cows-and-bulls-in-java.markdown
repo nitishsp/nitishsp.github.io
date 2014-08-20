@@ -11,4 +11,3 @@ A basic implementation of [Cows and Bulls](http://en.wikipedia.org/wiki/Bulls_an
 External links:
 
 + [Source code](http://pastebin.com/BFZfZZQ9) (pastebin)
-+ [Source code with data file](https://sites.google.com/site/nitishspblog/test/CowsAndBulls.zip) (.zip)
