@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Beating Google Olympic Doodles"
+external_url: http://nitishsp.blogspot.in/2012/08/beating-google-olympic-doodles.html
 ---
 
 Google has been creating interactive doodles for a while now. I am a big fan of these doodles. So when Google launched their [first interactive Olympic doodle](https://www.google.com/doodles/hurdles-2012) last night, I was hooked to it. Soon my friends started posting their high scores and my best score was far from theirs. I played for a while but soon lost interest. So I decided to try programming.

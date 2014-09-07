@@ -8,7 +8,11 @@ title: Nitish's Blog
     {% for post in site.posts %}
       <li>
         <span>{{ post.date | date_to_string }}</span>
-        <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+        {% if post.external_url %}
+          <a href="{{post.external_url}}" onclick="_gaq.push(['_trackpageview', '{{ post.url }}']);">{{ post.title }}<i class="external-icon"></i></a>
+        {% else %}
+          <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

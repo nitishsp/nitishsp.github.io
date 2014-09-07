@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Solution to Fedora 16 (64-bit) Dracut problem"
+external_url: http://nitishsp.blogspot.in/2011/12/solution-to-fedora-16-64-bit-dracut.html
 ---
 
 I had been using Fedora 14 before I decided to switch to Fedora 16. So I downloaded 64-bit iso and created a live usb media using [Live USB Creator](https://fedorahosted.org/liveusb-creator/). When I tried to boot off the usb, I got the following error:

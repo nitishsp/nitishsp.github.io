@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Low Power Consumption Mode for ATI cards in Fedora"
+external_url: http://nitishsp.blogspot.in/2012/02/low-power-consumption-mode-for-ati.html
 ---
 
 I have ATI Radeon HD 4570 graphics card. Ever since I started using Fedora, I couldn't properly install drivers for my graphics card. It's hell lot of difficult to get ATI drivers working on Fedora. Last week, when I installed proprietary ATI drivers on F16, the OS just stopped working. It would stop loading just before the login-prompt. This time I decided not to pursue the problem & did a rollback.

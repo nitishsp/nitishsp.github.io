@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ID3 Tag Modifier using Python"
+external_url: http://nitishsp.blogspot.in/2012/06/id3-tag-modifier-using-python.html
 ---
 
 I was organizing my mp3 library & I noticed that a lot of meta-information was not in proper case. As I am learning python, I decided to test whether mp3 metadata could be modified using python program. After an hour spent googling and coding, finally I have a simple program that changes title, artist and album information of mp3 files in 'Title' case. The program uses [eyeD3](http://eyed3.nicfit.net/) library to acess ID3 metadata.

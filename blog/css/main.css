@@ -74,6 +74,18 @@ ul.posts li span {
   font-family: 'Ubuntu', sans-serif;
 }
 
+ul.posts .external-icon {
+  background: url('icon_external.gif') no-repeat -1px -1px;
+  width: 11px;
+  height: 10px;
+  margin-left: 6px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /*****************************************************************************/
 /*
 /* Site

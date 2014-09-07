@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building a Search Application"
+external_url: http://nitishsp.blogspot.in/2012/10/building-search-engine-well-kind-of.html
 ---
 
 When I finished CS 101 on [Udacity](http://www.udacity.com/), I didn't realize the potential of the things I learned. I was happy that I got to learn some Python constructs and got to know how search engines work. It's only when the results of Udacity's [contest](http://blog.udacity.com/2012/05/winners-of-udacitys-cs101-contest.html) were announced, I realized the awesome things I could do with what I learned in CS 101. Udacians had developed some great apps. Then in June I took CS 253 and learned to use [Google App Engine](https://developers.google.com/appengine/) (GAE). It was a great experience. Though Steve Huffman isn't a professional teacher, he did a great job (better than most of my college professors). Later in September, I decided to build something to reinforce my knowledge of Python and GAE. That's how [Find Dialogue](http://finddialogue.appspot.com/) happened.
