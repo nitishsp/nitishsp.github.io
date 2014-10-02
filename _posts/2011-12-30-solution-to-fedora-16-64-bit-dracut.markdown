@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Solution to Fedora 16 (64-bit) Dracut problem"
 external_url: http://nitishsp.blogspot.in/2011/12/solution-to-fedora-16-64-bit-dracut.html
 ---

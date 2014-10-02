@@ -1,4 +1,16 @@
 name: Nitish Parkar
+
 highlighter: pygments
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
+
+sass:
+  style: :compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

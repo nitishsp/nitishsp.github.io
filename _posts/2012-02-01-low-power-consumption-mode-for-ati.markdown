@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Low Power Consumption Mode for ATI cards in Fedora"
 external_url: http://nitishsp.blogspot.in/2012/02/low-power-consumption-mode-for-ati.html
 ---

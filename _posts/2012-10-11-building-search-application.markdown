@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Building a Search Application"
 external_url: http://nitishsp.blogspot.in/2012/10/building-search-engine-well-kind-of.html
 ---

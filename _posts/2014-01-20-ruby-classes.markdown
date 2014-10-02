@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Ruby Classes"
 ---
 In Ruby, classes are instances of class **Class**. Since they are objects, they respond to messages sent using dot notation. Classes are special objects that have ability to spawn new objects. Classes are usually defined using `class` keyword with a constant as name. Classes can inherit the behavior (methods) of another class using inheritance. Ruby classes can have only one parent i.e. multiple inheritance is not allowed. You can reopen already defined classes and add methods to them.

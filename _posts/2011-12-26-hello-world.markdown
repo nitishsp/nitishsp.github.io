@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Hello World!"
 external_url: http://nitishsp.blogspot.in/2011/12/hello-world.html
 ---

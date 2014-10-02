@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ID3 Tag Modifier using Python"
 external_url: http://nitishsp.blogspot.in/2012/06/id3-tag-modifier-using-python.html
 ---

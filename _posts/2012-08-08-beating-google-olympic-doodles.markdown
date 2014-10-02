@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Beating Google Olympic Doodles"
 external_url: http://nitishsp.blogspot.in/2012/08/beating-google-olympic-doodles.html
 ---

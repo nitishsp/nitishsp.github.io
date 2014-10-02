@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Hangman in Java"
 external_url: http://nitishsp.blogspot.in/2012/03/hangman-in-java.html
 ---

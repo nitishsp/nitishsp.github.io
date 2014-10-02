@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Cows and Bulls in Java"
 external_url: http://nitishsp.blogspot.in/2012/03/cows-and-bulls-in-java.html
 ---

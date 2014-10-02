@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Outlier in the world of music lovers"
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Google App Engine Launcher in Fedora"
 external_url: http://nitishsp.blogspot.in/2012/12/google-app-engine-launcher-and-fedora.html
 ---
