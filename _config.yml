@@ -1,0 +1,4 @@
+name: Nitish's Blog
+pygments: true
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title.html

@@ -1,5 +1,0 @@
-name: Nitish's Blog
-pygments: true
-destination: ../blog
-baseurl: /blog
-markdown: kramdown
