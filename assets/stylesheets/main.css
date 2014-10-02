@@ -75,7 +75,7 @@ ul.posts li span {
 }
 
 ul.posts .external-icon {
-  background: url('icon_external.gif') no-repeat -1px -1px;
+  background: url('/assets/images/icon_external.gif') no-repeat -1px -1px;
   width: 11px;
   height: 10px;
   margin-left: 6px;
