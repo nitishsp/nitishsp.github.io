@@ -2,7 +2,7 @@
 title:  "Lessons learnt from the first native android app"
 ---
 
-I first began learning Android through a  course offered on Udacity - "Developing Android Apps". The course helped me get started with Android development and it introduced me to some of the fundamental concepts involved. Before that, I had mostly done web development (largely  in Ruby on Rails). Towards the end of the course I started working on a production app for a client. It was a chat app, combined with jobs-board like functionality (details obscured because of NDAs). Here are a few lessons I’ve learnt while developing my first native android application.
+I first began learning Android through a  course offered on Udacity - "Developing Android Apps". The course helped me get started with Android development and it introduced me to some of the fundamental concepts involved. Before that, I had mostly done web development (largely  in Ruby on Rails). Towards the end of the course I started working on a production app for a client. It was a chat app, combined with jobs-board like functionality. Here are a few lessons I’ve learnt while developing my first native android application.
 
 It should feel like an app
 -------------
