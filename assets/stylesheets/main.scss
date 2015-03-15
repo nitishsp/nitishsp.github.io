@@ -76,9 +76,15 @@ table {
   clear: both;
 }
 
+@media only screen and (max-width: 40em) {
+  ul.social-links {
+    width: 70px;
+    margin-top: 0px;
+  }
+}
+
 ul.social-links {
   list-style: none;
-  margin-top: 0.4em;
 
   li {
     display: inline;
@@ -103,6 +109,9 @@ ul.social-links {
   }
   a:hover i.el-icon-linkedin {
     color: #0e76a8;
+  }
+  a:hover i.el-icon-twitter {
+    color: #55acee;
   }
 
   a {
