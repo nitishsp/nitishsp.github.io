@@ -199,6 +199,31 @@ ul.posts .external-icon {
   }
 }
 
+.site .footer {
+  margin-top: 55px;
+}
+
+.site .footer a {
+  font-family: 'Open Sans', sans-serif;
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover {
+    color: #636363;
+    @include link_hover_transitions;
+  }
+}
+
+p.about {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 1em 0em;
+  color: #1d1d1d;
+  line-height: 1.7em;
+  text-align: justify;
+}
+
 
 /*****************************************************************************/
 /*
