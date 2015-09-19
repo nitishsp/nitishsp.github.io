@@ -1,4 +1,6 @@
 name: Nitish Parkar
+author: Nitish Parkar
+url: http://nitishparkar.com/
 
 highlighter: pygments
 markdown: kramdown
@@ -14,3 +16,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+gems:
+  - jekyll-feed
