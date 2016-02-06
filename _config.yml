@@ -2,7 +2,6 @@ name: Nitish Parkar
 author: Nitish Parkar
 url: http://nitishparkar.com/
 
-highlighter: pygments
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
 
