@@ -285,8 +285,8 @@ p.about {
 
 .post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .4em;
+
 }
 
 .post ul, .post ol {
@@ -294,16 +294,21 @@ p.about {
 }
 
 .post code {
-  font-family: serif;
-  letter-spacing: 1px;
+  font-family: monospace;
+  font-size: 14px;
   border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+  background-color: #fff;
+  padding: 0.1em 0.4em;
+}
+
+.highlight {
+  background-color: #fff;
 }
 
 .post pre code {
   border: none;
   word-wrap: break-word;
+  padding: 0;
 }
 
 .post blockquote {
