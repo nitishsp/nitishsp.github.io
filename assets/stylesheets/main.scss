@@ -286,7 +286,7 @@ p.about {
 .post pre {
   border: 1px solid #ddd;
   padding: 0 .4em;
-
+  overflow: auto;
 }
 
 .post ul, .post ol {
