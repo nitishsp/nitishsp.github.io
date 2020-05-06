@@ -16,5 +16,5 @@ defaults:
     values:
       layout: "post"
 
-gems:
+plugins:
   - jekyll-feed
