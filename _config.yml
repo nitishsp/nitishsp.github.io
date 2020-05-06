@@ -1,6 +1,6 @@
 name: Nitish Parkar
 author: Nitish Parkar
-url: http://nitishparkar.com/
+url: https://nitishparkar.com/
 
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
