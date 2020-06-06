@@ -1,0 +1,16 @@
+---
+title: "Elon Musk"
+book: "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future"
+authors: ["Ashlee Vance"]
+goodreads_link: https://www.goodreads.com/book/show/25541028
+goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1518291452l/25541028.jpg
+review_language: English
+external_review_links: ["https://www.goodreads.com/review/show/1564527076"]
+date: 2019-06-27
+---
+
+Before reading this book I knew a bit about Elon Musk from articles and videos on the internet. I was astonished by the fact that he put all the money he got from Paypal into SpaceX, Tesla, and Solar City. Tesla was already famous and successful, SpaceX had launched Musk's roadster into space and had achieved insane twin booster landing, Boring company was already a thing. So I was already a fan of Musk.
+
+After reading this book I have even more respect for him. This book really puts things into context. None of the tech companies started in the 2000s have had as big impact as any of the Musk's companies. He has willed these companies into existence by sheer determination. Musk is not just a high-level executive, he knows ins and outs of the technology, especially Space X. A few samples of his thought process in the book highlight his ability to reason from first principles.
+
+This book also sheds some light on Musk's personal life. Overall the book is a great read if you are interested in tech and like biographies. It will definitely leave you inspired. A warning though - this may cause you to lose interest in your job unless you are working on something with as grand goals as Tesla, SpaceX or Solar City.
