@@ -8,6 +8,7 @@ I suppose this post will be most useful to people looking for a machine within â
 
 ## RAM
 At least **8GB DDR4**
+- Check the frequency as well. Though I didn't see any difference for laptops in the same price range.
 - Windows 10 needs at least 8GB to run smoothly.
 - I have 8GB DDR4. Ubuntu often freezes if I open too many tabs in browsers + run multiple dev servers.
 - A friend had bought a machine with 4GB RAM two years ago. It's unusable even for light browsing, according to him.
@@ -30,7 +31,7 @@ AMD **Ryzen** series or Intel **10th** generation
 - Graphic cards in lower-end laptops aren't that better than onboard GPUs.
 
 ## Display
-**IPS** if it fits your budget
+**FHD**, **IPS** if it fits your budget
 - 14inch screen is enough for regular use.
 - Laptops in the same price range offer similar color gamut and refresh rates. Refresh rate should be 60Hz+. I didn't see any laptop with more than 60% sRGB coverage in this price range.
 - Manufacturers use a lot of marketing gimmicks. Find a detailed review, like the ones on [laptopmedia.com](https://laptopmedia.com/category/reviews/), or watch multiple youtube reviews of laptop models you have shortlisted to get an idea about the display.
