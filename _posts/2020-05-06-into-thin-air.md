@@ -2,11 +2,11 @@
 title: "इंटू थीन एअर"
 book: "Into Thin Air: A Personal Account of the Mount Everest Disaster"
 authors: ["Jon Krakauer"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/1898
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463384482l/1898.jpg
-review_language: Marathi
-external_review_links: ["https://www.insidemarathibooks.in/index.php/2020/05/16/into-thin-air-book-review-in-marathi/"]
-date: 2020-05-06
+language: Marathi
+external_links: ["https://www.insidemarathibooks.in/index.php/2020/05/16/into-thin-air-book-review-in-marathi/"]
 ---
 
 हिमालय - जगातील अत्युच्य उंचीची अनेक शिखरे असलेली आणि "रूफ ऑफ द वर्ल्ड" असे जिला संबोधले जाते अशी जगप्रसिद्ध पर्वतरांग. त्यातीलच सर्वात उंच पर्वत म्हणजे एवरेस्ट. जेव्हापासून एवरेस्टला सर्वात उंच शिखराचा दर्जा मिळाला तेव्हापासून ते गिर्यारोहकांना कायमच खुणावत आलं आहे. दरवर्षी मे महिन्याच्या सुमारास गिर्यारोहकांचे अनेक समूह एवरेस्ट सर करण्याचा प्रयत्न करतात. अश्याच १९९६ सालच्या हंगामात एक वादळ निमित्त झालं आणि अनेकांची आयुष्ये कायमची बदलून गेली. Into Thin Air ही त्याची कहाणी.

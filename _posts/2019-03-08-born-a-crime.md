@@ -2,11 +2,11 @@
 title: "Born a Crime"
 book: "Born a Crime: Stories From a South African Childhood"
 authors: ["Trevor Noah"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/29780253
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473867911l/29780253.jpg
-review_language: English
-external_review_links: ["https://www.goodreads.com/review/show/2754890474"]
-date: 2019-03-08
+language: English
+external_links: ["https://www.goodreads.com/review/show/2754890474"]
 ---
 
 When I came across this book I was intrigued by the book's description on Goodreads. I remembered Trevor Noah from a couple of standups I had seen. So I decided to read the book.

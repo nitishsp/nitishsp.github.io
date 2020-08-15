@@ -11,7 +11,11 @@ title: Nitish Parkar
         {% if post.external_url %}
           <a href="{{post.external_url}}" onclick="_gaq.push(['_trackpageview', '{{ post.url }}']);">{{ post.title }}<i class="external-icon"></i></a>
         {% else %}
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          {% if post.category == 'book_reviews' %}
+            <a href="{{ post.url }}">Book Review: {{ post.title }}</a>
+          {% else %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          {% endif %}
         {% endif %}
       </li>
     {% endfor %}

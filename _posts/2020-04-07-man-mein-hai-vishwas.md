@@ -2,11 +2,11 @@
 title: "मन में है विश्वास"
 book: "Man Mein Hai Vishwas"
 authors: ["Vishwas Nangare Patil"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/30522718
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1465674533l/30522718.jpg
-review_language: Marathi
-external_review_links: ["https://www.insidemarathibooks.in/index.php/2020/04/20/man-me-hai-vishwas-marathi-book-review/", "https://www.goodreads.com/review/show/3287035971"]
-date: 2020-04-07
+language: Marathi
+external_links: ["https://www.insidemarathibooks.in/index.php/2020/04/20/man-me-hai-vishwas-marathi-book-review/", "https://www.goodreads.com/review/show/3287035971"]
 ---
 
 मन में है विश्वास हे पुस्तक वाचण्याआधी विश्वास नांगरे-पाटील यांची जुजबी ओळख एक कर्तव्यदक्ष पोलीस अधिकारी म्हणून होती. जरी त्यांचे अनेक व्हिडिओस यूट्यूब वर उपलब्ध असले तरी ते काही पहिले नव्हते. केवळ एका सुप्रसिद्ध पोलीस अधिकाऱ्याविषयी असलेल्या कुतूहलापोटी हे पुस्तक वाचावयास घेतले आणि या पुस्तकानेही निराश केले नाही.

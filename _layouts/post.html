@@ -9,6 +9,21 @@ comments: true
 
 <div class="post">
   {{ content }}
+
+  {% if page.external_links %}
+    {% if page.language == "Marathi" %}
+      <p>इतरत्र प्रकाशित:</p>
+    {% else %}
+      <p>Also published on:</p>
+    {% endif %}
+    <ul>
+      {% for link in page.external_links %}
+      <li>
+        <a href="{{ link }}">{{ link }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>
 
 <hr id="comments-seperator">

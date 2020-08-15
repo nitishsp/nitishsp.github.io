@@ -2,11 +2,11 @@
 title: "प्रकाशवाटा"
 book: "Prakashvata"
 authors: ["Prakash Amte"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/8609510
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1279689324l/8609510.jpg
-review_language: Marathi
-external_review_links: []
-date: 2020-08-01
+language: Marathi
+external_links: []
 ---
 माडिया गोंड आदिवासींना मुख्य प्रवाहात सामील करून घ्यावे आणि त्यांची होणारी पिळवणूक थांबावी या भूमिकेतून बाबा आमटेंनी हेमलकसाला लोकबिरादरी प्रकल्पाची सुरुवात केली. वयाच्या बाविसाव्या वर्षी डॉ. प्रकाश आमटे यांनी त्याची धुरा हाती घेतली आणि तो यशस्वी करून दाखवला. प्रकाशवाटा म्हणजे प्राण्यांविषयी लोकांचे गैरसमज दूर करण्यासाठी प्राणी पाळणे, पाण्याविषयी लोकांचे गैरसमज दूर करण्यासाठी भोवऱ्यात उडी मारणे असे अनेक विलक्षण प्रयोग करणाऱ्या या अवलियाची गोष्ट.
 

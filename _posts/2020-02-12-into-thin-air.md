@@ -2,11 +2,11 @@
 title: "Into Thin Air"
 book: "Into Thin Air: A Personal Account of the Mount Everest Disaster"
 authors: ["Jon Krakauer"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/1898
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463384482l/1898.jpg
-review_language: Marathi
-external_review_links: ["https://www.insidemarathibooks.in/index.php/2020/05/16/into-thin-air-book-review-in-marathi/"]
-date: 2020-02-12
+language: Marathi
+external_links: ["https://www.insidemarathibooks.in/index.php/2020/05/16/into-thin-air-book-review-in-marathi/"]
 ---
 
 I have always liked going to the Himalayas(haven't hiked there yet). Though I never seriously aspired to climb Mount Everest, I was always intrigued by it. So I picked this up with the expectations of getting to know what it is like to climb to the roof of the world and learn about what happened during the 1996 season. The book didn't disappoint.

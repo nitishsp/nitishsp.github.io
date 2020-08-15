@@ -2,11 +2,11 @@
 title: "Dark Summit"
 book: "Dark Summit: The True Story of Everest's Most Controversial Season"
 authors: ["Nick Heil"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/2841802
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1316136875l/2841802.jpg
-review_language: English
-external_review_links: ["https://www.goodreads.com/review/show/2754890474"]
-date: 2020-02-13
+language: English
+external_links: ["https://www.goodreads.com/review/show/2754890474"]
 ---
 
 I picked this one up right after Into thin air. I was looking to read more about Everest disasters and this seemed like a good follow up book.

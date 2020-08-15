@@ -2,11 +2,11 @@
 title: "Permanent Record"
 book: "Permanent Record"
 authors: ["Edward Snowden"]
+category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/46223297
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564666396l/46223297.jpg
-review_language: English
-external_review_links: ["https://www.goodreads.com/review/show/3005036156"]
-date: 2020-04-05
+language: English
+external_links: ["https://www.goodreads.com/review/show/3005036156"]
 ---
 
 Before reading Permanent Record I was somewhat aware of personal data being gathered by companies and the government, but it was still an eye-opener. The extent to which the US intelligence agencies have gone to collect and store data is mind-boggling.

@@ -11,18 +11,9 @@ sass:
 defaults:
   - scope:
       path: ""
-      type: "book_reviews"
-    values:
-      layout: "book_review"
-  - scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"
 
 plugins:
   - jekyll-feed
-
-collections:
-  book_reviews:
-    output: true
