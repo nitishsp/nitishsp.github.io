@@ -5,7 +5,7 @@ authors: ["Jon Krakauer"]
 category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/1898
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463384482l/1898.jpg
-language: Marathi
+language: English
 external_links: ["https://www.insidemarathibooks.in/index.php/2020/05/16/into-thin-air-book-review-in-marathi/"]
 ---
 

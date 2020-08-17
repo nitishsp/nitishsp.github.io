@@ -1,7 +1,7 @@
 ---
 title: "इंटू थीन एअर"
 book: "Into Thin Air: A Personal Account of the Mount Everest Disaster"
-authors: ["Jon Krakauer"]
+authors: ["जॉन क्राकावर"]
 category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/1898
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463384482l/1898.jpg

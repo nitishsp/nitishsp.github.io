@@ -1,7 +1,7 @@
 ---
 title: "मन में है विश्वास"
 book: "Man Mein Hai Vishwas"
-authors: ["Vishwas Nangare Patil"]
+authors: ["विश्वास नांगरे-पाटील"]
 category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/30522718
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1465674533l/30522718.jpg

@@ -1,7 +1,7 @@
 ---
 title: "प्रकाशवाटा"
 book: "Prakashvata"
-authors: ["Prakash Amte"]
+authors: ["प्रकाश आमटे"]
 category: book_reviews
 goodreads_link: https://www.goodreads.com/book/show/8609510
 goodreads_cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1279689324l/8609510.jpg
