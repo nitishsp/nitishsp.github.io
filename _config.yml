@@ -1,6 +1,6 @@
 name: Nitish Parkar
 author: Nitish Parkar
-url: https://nitishparkar.com/
+url: https://nitishparkar.com
 
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
@@ -14,6 +14,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      comments: true
 
 plugins:
   - jekyll-feed
